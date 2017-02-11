@@ -6,16 +6,40 @@ var ranNum=Math.random();
 
 var array = [1, 2, 3, 4, 5];
 var comeOn = 'Hi! ok';
+var someStuff = 'I am the very model of a modern major general.';
+var cheeky = 'abcdefghijklmnopqrstuvwxyz';
+var eee = 'eeeeeeee';
 
 var num1 = array.reduce(function(total, num){return total + num}, 0);
 // console.log(num1);
+var arrArr = [[1, 1, 1], [2, 3, 4], [5, 5, 5]];
 
 // remove(comeOn);
+// stairsIn20(arrArr);
 
-var arrArr = [[1, 1, 1], [2, 3, 4], [5, 5, 5]]
+// console.log(testSubStr(someStuff, 6));
+// console.log(testSubStr(cheeky, 3));
+// console.log(replaceNth(eee, 3, 'e', 'x'));
 
-stairsIn20(arrArr);
-console.log(stairsIn20(arrArr));
+function testSubStr(test, index) {
+  test = test.substring(0, index) + ' boat ' + test.substring(index+1);
+  return test;
+}
+
+function replaceNth(text, n, oldValue, newValue) {
+  var toIndex = 1;
+  for (i = 0; i < text.length; i++) {
+    if (text.charAt(i) == oldValue && toIndex == n) {
+      text = text.substring(0, i) + newValue + text.substring(i+1);
+      toIndex = 1;
+    } else if (text.charAt(i) == oldValue) {
+      toIndex++;
+    }
+  }
+  return text;
+}
+
+
 
 function stairsIn20(s) {
   console.log('s: ', s);
