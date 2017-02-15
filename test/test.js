@@ -4,13 +4,17 @@ var ranNum=Math.random();
 
 // console.log(ranNum);
 
-var array = [1, 2, 3, 4, 5];
+var testArray = [1, 2, 5, 4, 8, 3];
+var testArray2 = [1, -2, 5, 14, 8, 3];
+var testArray3 = [1, 2, 5, 4, 8, 3];
+var testArray4 = [1, 2, 5, 4, 8, 3];
+var testArray5 = [1, 2, 5, 4, 8, 3];
 var comeOn = 'Hi! ok';
 var someStuff = 'I am the very model of a modern major general.';
 var cheeky = 'abcdefghijklmnopqrstuvwxyz';
 var eee = 'eeeeeeee';
 
-var num1 = array.reduce(function(total, num){return total + num}, 0);
+var num1 = testArray.reduce(function(total, num){return total + num}, 0);
 // console.log(num1);
 var arrArr = [[1, 1, 1], [2, 3, 4], [5, 5, 5]];
 
@@ -20,6 +24,36 @@ var arrArr = [[1, 1, 1], [2, 3, 4], [5, 5, 5]];
 // console.log(testSubStr(someStuff, 6));
 // console.log(testSubStr(cheeky, 3));
 // console.log(replaceNth(eee, 3, 'e', 'x'));
+
+// console.log("Sorting: ", testArray.sort());
+// console.log("Sorting and popping: ", testArray.sort().shift());
+console.log(sumArray(testArray2));
+
+// function sumArray(array) {
+//   var newArray = [];
+//   if (array == null) {
+//     return 0;
+//   } else {
+//   newArray = array.sort();
+//   newArray.shift();
+//   newArray.pop();
+//   var sum = newArray.reduce(function(total, num){return total + num}, 0);
+//   return sum;
+//   }
+// }
+
+function sumArray(array) {
+  var newArray = [];
+  newArray = array.sort(function(a, b){return a-b});
+  console.log(newArray);
+  newArray.shift();
+  console.log("newArray: ", newArray);
+  newArray.pop();
+  console.log(newArray);
+  var sum = newArray.reduce(function(total, num){return total + num}, 0);
+  console.log(sum);
+  return sum;
+}
 
 function testSubStr(test, index) {
   test = test.substring(0, index) + ' boat ' + test.substring(index+1);
