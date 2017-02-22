@@ -18,6 +18,24 @@ var num1 = testArray.reduce(function(total, num){return total + num}, 0);
 // console.log(num1);
 var arrArr = [[1, 1, 1], [2, 3, 4], [5, 5, 5]];
 
+var basketballResults = [
+  ['Golden State Warriors', '559:503'],
+  ['Memphis Grizzlies', '550:511'],
+  ['Portland Trail Blazers', '527:520'],
+  ['Houston Rockets', '494:458'],
+  ['San Antonio Spurs', '469:460'],
+  ['Phoenix Suns', '523:522'],
+  ['Minnesota Timberwolves', '495:494'],
+  ['Utah Jazz', '399:402'],
+  ['Sacramento Kings', '420:431'],
+  ['Denver Nuggets', '646:658'],
+  ['Los Angeles Clippers', '382:422'],
+  ['Dallas Mavericks', '492:513'],
+  ['Los Angeles Lakers', '641:637'],
+  ['Oklahoma City Thunder', '315:318'],
+  ['New Orleans Pelicans', '433:454']
+];
+
 // remove(comeOn);
 // stairsIn20(arrArr);
 
@@ -27,7 +45,26 @@ var arrArr = [[1, 1, 1], [2, 3, 4], [5, 5, 5]];
 
 // console.log("Sorting: ", testArray.sort());
 // console.log("Sorting and popping: ", testArray.sort().shift());
-console.log(sumArray(testArray2));
+// console.log(sumArray(testArray2));
+console.log("LA Points: ", getLosAngelesPoints(basketballResults));
+
+function getLosAngelesPoints(results) {
+  var num = 0;
+  var colonIndex = 0;
+  for (i = 0; i < results.length; i++) {
+    console.log("ok: ", results[i][0].slice(0, 11));
+    if (results[i][0].slice(0, 11) === "Los Angeles") {
+      colonIndex = results[i][1].indexOf(":");
+      console.log("colonIndex: ", colonIndex);
+      num += parseInt(results[i][1].slice(0, colonIndex));
+      console.log("points: ", parseInt(results[i][1].slice(0, colonIndex)));
+    }
+  }
+  return num;
+}
+
+
+
 
 // function sumArray(array) {
 //   var newArray = [];
