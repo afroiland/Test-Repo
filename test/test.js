@@ -21,6 +21,7 @@ var arrArr = [[1, 1, 1], [2, 3, 4], [5, 5, 5]];
 var basketballResults = [
   ['Golden State Warriors', '559:503'],
   ['Memphis Grizzlies', '550:511'],
+  ["Los Angeles 9nines","150:813"],
   ['Portland Trail Blazers', '527:520'],
   ['Houston Rockets', '494:458'],
   ['San Antonio Spurs', '469:460'],
@@ -46,14 +47,18 @@ var basketballResults = [
 // console.log("Sorting: ", testArray.sort());
 // console.log("Sorting and popping: ", testArray.sort().shift());
 // console.log(sumArray(testArray2));
+console.log("how how how", typeof(NaN));
 console.log("LA Points: ", getLosAngelesPoints(basketballResults));
 
 function getLosAngelesPoints(results) {
   var num = 0;
   var colonIndex = 0;
   for (i = 0; i < results.length; i++) {
-    console.log("ok: ", results[i][0].slice(0, 11));
-    if (results[i][0].slice(0, 11) === "Los Angeles") {
+    console.log("Team Name: ", results[i][0].slice(0, 12));
+    console.log("ok: ", results[i][0].slice(12, 13));
+    console.log("this: ", parseInt(results[i][0].slice(12, 13)));
+    // console.log("and: ", typeof(parseInt(results[i][0].slice(12, 13))));
+    if (results[i][0].slice(0, 12) === "Los Angeles " && parseInt(results[i][0].slice(12, 13)) != 9) {
       colonIndex = results[i][1].indexOf(":");
       console.log("colonIndex: ", colonIndex);
       num += parseInt(results[i][1].slice(0, colonIndex));
