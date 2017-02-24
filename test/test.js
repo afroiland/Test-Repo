@@ -1,7 +1,6 @@
 
 
 var ranNum=Math.random();
-
 // console.log(ranNum);
 
 var testArray = [1, 2, 5, 4, 8, 3];
@@ -47,8 +46,20 @@ var basketballResults = [
 // console.log("Sorting: ", testArray.sort());
 // console.log("Sorting and popping: ", testArray.sort().shift());
 // console.log(sumArray(testArray2));
-console.log("how how how", typeof(NaN));
-console.log("LA Points: ", getLosAngelesPoints(basketballResults));
+// console.log("how how how", typeof(NaN));
+// console.log("LA Points: ", getLosAngelesPoints(basketballResults));
+console.log("Chickens, Cows: ", animals(0, 0));
+
+function animals(heads, legs){
+  var chickens = 0;
+  var cows = 0;
+  if (heads === 0) {
+    return [chickens, cows];
+  } else if (heads == (legs/4)) {
+    cows =+ heads;
+  } else if ()
+
+}
 
 function getLosAngelesPoints(results) {
   var num = 0;
@@ -67,9 +78,6 @@ function getLosAngelesPoints(results) {
   }
   return num;
 }
-
-
-
 
 // function sumArray(array) {
 //   var newArray = [];
@@ -115,8 +123,6 @@ function replaceNth(text, n, oldValue, newValue) {
   return text;
 }
 
-
-
 function stairsIn20(s) {
   console.log('s: ', s);
   console.log(s[1][0]);
@@ -128,7 +134,6 @@ function stairsIn20(s) {
   }
   return total;
 }
-
 
 function remove(string) {
   var words = string;
