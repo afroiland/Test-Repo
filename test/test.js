@@ -54,6 +54,12 @@ var basketballResults = [
 // console.log("howMuchILoveYou(50)", howMuchILoveYou(50));
 
 
+function isOpposite(s1,s2){
+
+
+}
+
+
 function howMuchILoveYou(nbPetals) {
   for (i = nbPetals; i > 6; i -= 6) {
     console.log(i);
