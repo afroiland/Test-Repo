@@ -48,23 +48,43 @@ var basketballResults = [
 // console.log(sumArray(testArray2));
 // console.log("how how how", typeof(NaN));
 // console.log("LA Points: ", getLosAngelesPoints(basketballResults));
-console.log("Chickens, Cows: ", animals(72, 200));
+// console.log("Chickens, Cows: ", animals(72, 200));
+// console.log("Chickens, Cows: ", animals(12, 24));
+// console.log("Chickens, Cows: ", animals(25, 555));
+// console.log("howMuchILoveYou(50)", howMuchILoveYou(50));
+
+
+function howMuchILoveYou(nbPetals) {
+  for (i = nbPetals; i > 6; i -= 6) {
+    console.log(i);
+  }
+  if (i === 1) {
+    return "I love you";
+  } else if (i === 2) {
+    return "a little";
+  } else if (i === 3) {
+    return "a lot";
+  } else if (i === 4) {
+    return "passionately";
+  } else if (i === 5) {
+    return "madly";
+  } else if (i === 6) {
+    return "not at all";
+  }
+}
 
 function animals(heads, legs){
   var chickens = 0;
-  var cows = 0;
+  var cows = heads;
   if (heads === 0) {
-    return [chickens, cows];
+    return [0, 0];
   } else if (heads == (legs/4)) {
-    cows += heads;
+    return [chickens, cows];
   } else {
     if (heads > (legs/4)) {
-      for (i = 0; (chickens + cows < heads); i++) {
-        chickens += 1;
-        if (chickens + cows == heads && cows == (legs-(chickens*2))/4) {
-          break;
-        }
-        cows += (heads - chickens);
+      for (i = 0; (chickens*2 + cows*4 != legs); i++) {
+        chickens ++;
+        cows --;
       }
     }
   }
