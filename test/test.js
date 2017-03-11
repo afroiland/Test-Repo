@@ -52,12 +52,22 @@ var basketballResults = [
 // console.log("Chickens, Cows: ", animals(12, 24));
 // console.log("Chickens, Cows: ", animals(25, 555));
 // console.log("howMuchILoveYou(50)", howMuchILoveYou(50));
-// console.log("isOpposite()", isOpposite());
+// console.log("isOpposite(tWDCWXKinPTG, TwdcwxkINptg)", isOpposite("tWDCWXKinPTG", "TwdcwxkINptg"));
 
 
 function isOpposite(s1,s2){
-  for (i = 0; i < s1.length; i++) {
-    if (s1.charAt(i).toUpperCase() == s2.charAt(i) && s2.charAt(i).toLowerCase() == s1.charAt(i) || s1.charAt(i).toLowerCase() == s2.charAt(i) && s2.charAt(i).toUpperCase() == s1.charAt(i)) {
+  let count = 0;
+  if (s1.length != s2.length || s1.length == 0) {
+    return false;
+  } else {
+    for (i = 0; i < s1.length; i++) {
+      console.log(s1.charAt(i).toUpperCase(), s2.charAt(i));
+      if (s1.charAt(i).toUpperCase() == s2.charAt(i) && s2.charAt(i).toLowerCase() == s1.charAt(i) || s1.charAt(i).toLowerCase() == s2.charAt(i) && s2.charAt(i).toUpperCase() == s1.charAt(i)) {
+        count++;
+        console.log("count: ", count);
+      }
+    }
+    if (count == s1.length) {
       return true;
     } else {
       return false;
