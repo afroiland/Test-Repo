@@ -36,6 +36,8 @@ var basketballResults = [
   ['New Orleans Pelicans', '433:454']
 ];
 
+var busRiders = [[10,0],[3,5],[5,8]];
+
 // remove(comeOn);
 // stairsIn20(arrArr);
 
@@ -54,6 +56,22 @@ var basketballResults = [
 // console.log("howMuchILoveYou(50)", howMuchILoveYou(50));
 // console.log("isOpposite(tWDCWXKinPTG, TwdcwxkINptg)", isOpposite("tWDCWXKinPTG", "TwdcwxkINptg"));
 
+
+
+
+var number = function(busStops) {
+  var passengers = 0;
+  for (i = 0; i < busStops.length; i++ ) {
+    console.log("passengers: ", passengers);
+    console.log("busStops[i][0]: ", busStops[i][0]);
+    console.log("busStops[i][1]: ", busStops[i][1]);
+    passengers += busStops[i][0];
+    passengers -= busStops[i][1];
+  }
+  return passengers;
+};
+
+// console.log("number(busRiders): ", number(busRiders));
 
 function isOpposite(s1,s2){
   let count = 0;
