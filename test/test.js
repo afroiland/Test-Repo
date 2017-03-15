@@ -73,7 +73,7 @@ var number = function(busStops) {
 
 // console.log("number(busRiders): ", number(busRiders));
 
-function isOpposite(s1,s2){
+function isOpposite(s1,s2) {
   let count = 0;
   if (s1.length != s2.length || s1.length == 0) {
     return false;
@@ -113,7 +113,7 @@ function howMuchILoveYou(nbPetals) {
   }
 }
 
-function animals(heads, legs){
+function animals(heads, legs) {
   var chickens = 0;
   var cows = heads;
   if (heads === 0) {
