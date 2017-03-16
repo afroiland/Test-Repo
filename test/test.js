@@ -57,6 +57,25 @@ var busRiders = [[10,0],[3,5],[5,8]];
 // console.log("isOpposite(tWDCWXKinPTG, TwdcwxkINptg)", isOpposite("tWDCWXKinPTG", "TwdcwxkINptg"));
 
 
+//Not pretty, but here is the function that got there. Not being able to figure out the inputs for testing was a bummer.
+function last(list){
+  console.log("initialArguments: ", arguments);
+  if (typeof list == 'object') {
+    console.log("Looks like object");
+    return list[list.length-1];
+  } else {
+    console.log("Looks like arguments");
+    console.log("arguments: ", arguments);
+    console.log("arguments.length: ", arguments.length);
+    var placeholder = arguments[Object.keys(arguments)[Object.keys(arguments).length - 1]];
+    console.log("placeholder: ", placeholder);
+    if (typeof placeholder == 'number') {
+      return placeholder;
+    } else {
+      return placeholder.charAt(placeholder.length-1);
+    }
+  }
+}
 
 
 var number = function(busStops) {
@@ -92,7 +111,6 @@ function isOpposite(s1,s2) {
     }
   }
 }
-
 
 function howMuchILoveYou(nbPetals) {
   for (i = nbPetals; i > 6; i -= 6) {
