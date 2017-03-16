@@ -55,7 +55,25 @@ var busRiders = [[10,0],[3,5],[5,8]];
 // console.log("Chickens, Cows: ", animals(25, 555));
 // console.log("howMuchILoveYou(50)", howMuchILoveYou(50));
 // console.log("isOpposite(tWDCWXKinPTG, TwdcwxkINptg)", isOpposite("tWDCWXKinPTG", "TwdcwxkINptg"));
+// console.log("digitize(54321): ", digitize(54321));
 
+
+function digitize(n) {
+  var array1 = [];
+  var array2 = [];
+  var numString = n.toString();
+  console.log(n);
+  for (i = 0; i < numString.length; i++) {
+    // console.log("test");
+    console.log(numString.charAt(i));
+    array1.push(numString.charAt(i));
+  }
+  for (j = 0; j < array1.length; j++) {
+    array2.push(parseInt(array1[j]));
+  }
+  array2.reverse();
+  return array2;
+}
 
 //Not pretty, but here is the function that got there. Not being able to figure out the inputs for testing was a bummer.
 function last(list){
@@ -76,7 +94,6 @@ function last(list){
     }
   }
 }
-
 
 var number = function(busStops) {
   var passengers = 0;
