@@ -57,6 +57,24 @@ var busRiders = [[10,0],[3,5],[5,8]];
 // console.log("isOpposite(tWDCWXKinPTG, TwdcwxkINptg)", isOpposite("tWDCWXKinPTG", "TwdcwxkINptg"));
 // console.log("digitize(54321): ", digitize(54321));
 // console.log("remove2('Hi!!!'): ", remove2('Hi!!!'));
+console.log("replaceVowels('Hi!!'): ", replaceVowels('Hi!!'));
+
+
+function replaceVowels(s){
+  var newString = s;
+  console.log(newString);
+  newString = newString.replace(/a/g, '!');
+  newString = newString.replace(/e/g, '!');
+  newString = newString.replace(/i/g, '!');
+  newString = newString.replace(/o/g, '!');
+  newString = newString.replace(/u/g, '!');
+  newString = newString.replace(/A/g, '!');
+  newString = newString.replace(/E/g, '!');
+  newString = newString.replace(/I/g, '!');
+  newString = newString.replace(/O/g, '!');
+  newString = newString.replace(/U/g, '!');
+  return newString;
+}
 
 function remove2(s){
   var newString = s;
