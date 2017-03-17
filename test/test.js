@@ -184,10 +184,15 @@ function howMuchILoveYou(nbPetals) {
   }
 }
 
+console.log("animals(72, 200): ", animals(72, 200));
+console.log("animals(25, 555): ", animals(25, 555));
+
 function animals(heads, legs) {
   var chickens = 0;
   var cows = heads;
-  if (heads === 0) {
+  if (legs > (4*heads) || legs < (2*heads) || legs%2 != 0) {
+    return "No solutions";
+  } else if (heads === 0) {
     return [0, 0];
   } else if (heads == (legs/4)) {
     return [chickens, cows];
@@ -199,8 +204,14 @@ function animals(heads, legs) {
       }
     }
   }
+
+
+
+
   return [chickens, cows];
 }
+
+
 
 function getLosAngelesPoints(results) {
   var num = 0;
