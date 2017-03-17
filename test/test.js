@@ -57,10 +57,12 @@ var busRiders = [[10,0],[3,5],[5,8]];
 // console.log("isOpposite(tWDCWXKinPTG, TwdcwxkINptg)", isOpposite("tWDCWXKinPTG", "TwdcwxkINptg"));
 // console.log("digitize(54321): ", digitize(54321));
 // console.log("remove2('Hi!!!'): ", remove2('Hi!!!'));
-console.log("replaceVowels('Hi!!'): ", replaceVowels('Hi!!'));
+console.log("replaceVowels('Hi!!'): ", replaceVowels2('HI!!'));
 
 
-function replaceVowels(s){
+
+
+function replaceVowels(s) {
   var newString = s;
   console.log(newString);
   newString = newString.replace(/a/g, '!');
@@ -76,7 +78,14 @@ function replaceVowels(s){
   return newString;
 }
 
-function remove2(s){
+//Here's a cleaner version of the above function. gi stands for global insensitive in the replace method.
+function replaceVowels2(s) {
+  var newString = s;
+  newString = newString.replace(/[aeiou]/gi, '!');
+  return newString;
+}
+
+function remove2(s) {
   var newString = s;
   var i = 0;
   console.log(newString.charAt(newString.length-1));
