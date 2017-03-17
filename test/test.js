@@ -56,7 +56,19 @@ var busRiders = [[10,0],[3,5],[5,8]];
 // console.log("howMuchILoveYou(50)", howMuchILoveYou(50));
 // console.log("isOpposite(tWDCWXKinPTG, TwdcwxkINptg)", isOpposite("tWDCWXKinPTG", "TwdcwxkINptg"));
 // console.log("digitize(54321): ", digitize(54321));
+// console.log("remove2('Hi!!!'): ", remove2('Hi!!!'));
 
+function remove2(s){
+  var newString = s;
+  var i = 0;
+  console.log(newString.charAt(newString.length-1));
+  while (newString.charAt(newString.length-1) == "!" && i >= 0) {
+    console.log(newString.charAt(newString.length-1));
+    newString = newString.slice(0, newString.length-1);
+    i++;
+  }
+  return newString;
+}
 
 function digitize(n) {
   var array1 = [];
