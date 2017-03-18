@@ -53,11 +53,34 @@ var busRiders = [[10,0],[3,5],[5,8]];
 // console.log("Chickens, Cows: ", animals(72, 200));
 // console.log("Chickens, Cows: ", animals(12, 24));
 // console.log("Chickens, Cows: ", animals(25, 555));
+// console.log("animals(72, 200): ", animals(72, 200));
+// console.log("animals(25, 555): ", animals(25, 555));
 // console.log("howMuchILoveYou(50)", howMuchILoveYou(50));
 // console.log("isOpposite(tWDCWXKinPTG, TwdcwxkINptg)", isOpposite("tWDCWXKinPTG", "TwdcwxkINptg"));
 // console.log("digitize(54321): ", digitize(54321));
 // console.log("remove2('Hi!!!'): ", remove2('Hi!!!'));
 // console.log("replaceVowels('Hi!!'): ", replaceVowels2('HI!!'));
+
+
+
+//Tried to do this one waaaaay cleaner w/ regex, but Code Wars didn't like it for some reason.
+function timedReading(maxLength, text) {
+  var array = text.split(' ');
+  var words = 0;
+  for (i = 0; i < array.length; i++) {
+    var string = array[i].charAt(array[i].length-1);
+    if (string == '.' || string == ',' || string == "'" || string == '!' || string == '?') {
+      array[i] = array[i].slice(0, -1);
+    }
+  }
+  for (i = 0; i < array.length; i++) {
+    if (array[i].length <= maxLength) {
+      console.log(array[i]);
+      words++;
+    }
+  }
+  return words;
+}
 
 function replaceVowels(s) {
   var newString = s;
@@ -184,9 +207,6 @@ function howMuchILoveYou(nbPetals) {
   }
 }
 
-console.log("animals(72, 200): ", animals(72, 200));
-console.log("animals(25, 555): ", animals(25, 555));
-
 function animals(heads, legs) {
   var chickens = 0;
   var cows = heads;
@@ -204,14 +224,8 @@ function animals(heads, legs) {
       }
     }
   }
-
-
-
-
   return [chickens, cows];
 }
-
-
 
 function getLosAngelesPoints(results) {
   var num = 0;
