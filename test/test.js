@@ -62,12 +62,21 @@ var busRiders = [[10,0],[3,5],[5,8]];
 // console.log("replaceVowels('Hi!!'): ", replaceVowels2('HI!!'));
 var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { name: 'c' }, { name: 'e' }, { name: 'f' }, { name: 'g' }, { name: 'h' }, { name: 'z' } ];
 // console.log('duckDuckGoose(group1, x): ', duckDuckGoose(group1, 11));
-
+console.log('newNumeralSystem(G): ', newNumeralSystem('G'));
 
 function newNumeralSystem(number) {
-
-
-
+  var answers = [];
+  var alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var num = alpha.indexOf(number);
+  for (i = 0; i <= num; i++) {
+    for (j = i; j <= num; j++) {
+      console.log('i, j: ', i, j);
+      if (i + j == num) {
+        answers.push(alpha.charAt(i) + ' + ' + alpha.charAt(j));
+      }
+    }
+  }
+  return answers;
 }
 
 
