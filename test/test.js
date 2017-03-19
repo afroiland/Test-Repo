@@ -60,8 +60,28 @@ var busRiders = [[10,0],[3,5],[5,8]];
 // console.log("digitize(54321): ", digitize(54321));
 // console.log("remove2('Hi!!!'): ", remove2('Hi!!!'));
 // console.log("replaceVowels('Hi!!'): ", replaceVowels2('HI!!'));
+var group1 = [ { name: 'a' },
+   { name: 'b' },
+   { name: 'c' },
+   { name: 'd' },
+   { name: 'c' },
+   { name: 'e' },
+   { name: 'f' },
+   { name: 'g' },
+   { name: 'h' },
+   { name: 'z' } ];
+console.log('duckDuckGoose(group1, x): ', duckDuckGoose(group1, 11));
 
 
+function duckDuckGoose(players, goose) {
+  if (goose <= players.length) {
+    return players[goose-1].name;
+  } else {
+    if (goose%players.length == 0) {
+      return players[players.length-1].name;
+    } else return players[goose%players.length-1].name;
+  }
+}
 
 //Tried to do this one waaaaay cleaner w/ regex, but Code Wars didn't like it for some reason.
 function timedReading(maxLength, text) {
