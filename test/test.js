@@ -63,6 +63,23 @@ var busRiders = [[10,0],[3,5],[5,8]];
 var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { name: 'c' }, { name: 'e' }, { name: 'f' }, { name: 'g' }, { name: 'h' }, { name: 'z' } ];
 // console.log('duckDuckGoose(group1, x): ', duckDuckGoose(group1, 11));
 // console.log('newNumeralSystem(G): ', newNumeralSystem('G'));
+console.log('formatMoney(3): ', formatMoney(3));
+
+
+function formatMoney(amount){
+console.log(amount);
+  let string = amount.toString();
+  if (string.indexOf('.') == -1) {
+    console.log('case1:');
+    return ('$' + string + '.00');
+  } else if (string.indexOf('.') == string.length-3) {
+    console.log('case2: ', string.indexOf('.'));
+    return ('$' + string);
+  } else if (string.indexOf('.') == string.length-2) {
+    console.log('case3: ', string.indexOf('.'));
+    return ('$' + string + '0');
+  }
+}
 
 function newNumeralSystem(number) {
   var answers = [];
@@ -78,8 +95,6 @@ function newNumeralSystem(number) {
   }
   return answers;
 }
-
-
 
 function duckDuckGoose(players, goose) {
   if (goose <= players.length) {
