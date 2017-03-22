@@ -63,8 +63,27 @@ var busRiders = [[10,0],[3,5],[5,8]];
 var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { name: 'c' }, { name: 'e' }, { name: 'f' }, { name: 'g' }, { name: 'h' }, { name: 'z' } ];
 // console.log('duckDuckGoose(group1, x): ', duckDuckGoose(group1, 11));
 // console.log('newNumeralSystem(G): ', newNumeralSystem('G'));
-console.log('formatMoney(3): ', formatMoney(3));
+// console.log('formatMoney(3): ', formatMoney(3));
 
+
+
+var SequenceSum = (function() {
+  function SequenceSum() {}
+  SequenceSum.showSequence = function(count) {
+    let nums = '';
+    let total = 0;
+    for (let i = count; i >= 0; i--) {
+      total += count-i;
+      nums = nums + '+' + (count-i).toString();
+      console.log('(count-i).toString(): ', (count-i).toString());
+    }
+    nums = nums.slice(1, nums.length);
+    return nums + ' = ' + total.toString();
+  };
+  return SequenceSum;
+})();
+
+console.log('SequenceSum.showSequence(6): ', SequenceSum.showSequence(6));
 
 function formatMoney(amount){
 console.log(amount);
