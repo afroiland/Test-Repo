@@ -64,8 +64,25 @@ var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { nam
 // console.log('duckDuckGoose(group1, x): ', duckDuckGoose(group1, 11));
 // console.log('newNumeralSystem(G): ', newNumeralSystem('G'));
 // console.log('formatMoney(3): ', formatMoney(3));
+// console.log('elimination([2,5,34,1,22,1]): ', elimination([2,5,34,1,22,1]));
 
 
+function elimination(arr){
+  let match = false;
+  // let answer = null;
+  for (i = 0; i < arr.length; i++) {
+    for (j = i+1; j < arr.length; j++) {
+      console.log('arr[i], arr[j]: ', arr[i], arr[j]);
+      if (arr[i] == arr[j]) {
+        return arr[i];
+        match = true;
+      }
+    }
+  }
+  if (!match) {
+    return null;
+  }
+}
 
 var SequenceSum = (function() {
   function SequenceSum() {}
