@@ -72,6 +72,11 @@ var SequenceSum = (function() {
   SequenceSum.showSequence = function(count) {
     let nums = '';
     let total = 0;
+    if (count == 0) {
+      return '0=0';
+    } else if (count < 0) {
+      return count.toString() + '<0';
+    }
     for (let i = count; i >= 0; i--) {
       total += count-i;
       nums = nums + '+' + (count-i).toString();
@@ -83,7 +88,7 @@ var SequenceSum = (function() {
   return SequenceSum;
 })();
 
-console.log('SequenceSum.showSequence(6): ', SequenceSum.showSequence(6));
+// console.log('SequenceSum.showSequence(6): ', SequenceSum.showSequence(6));
 
 function formatMoney(amount){
 console.log(amount);
