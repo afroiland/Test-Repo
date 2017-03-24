@@ -67,6 +67,22 @@ var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { nam
 // console.log('elimination([2,5,34,1,22,1]): ', elimination([2,5,34,1,22,1]));
 
 
+function closeCompare(a, b, margin){
+  if (Math.abs(a-b) <= margin) {
+    return 0;
+  } else if (a-b < 0 && Math.abs(a-b) >= margin) {
+    return -1;
+  } else if (a-b > 0 && Math.abs(a-b) >= margin) {
+    return 1;
+  } else if (a-b < 0 && margin == null) {
+    return -1;
+  } else if (a-b > 0 && margin == null) {
+    return 1;
+  } else if (a-b == 0) {
+    return 0;
+  }
+}
+
 function elimination(arr){
   let match = false;
   // let answer = null;
