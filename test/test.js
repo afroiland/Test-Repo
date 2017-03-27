@@ -65,7 +65,27 @@ var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { nam
 // console.log('newNumeralSystem(G): ', newNumeralSystem('G'));
 // console.log('formatMoney(3): ', formatMoney(3));
 // console.log('elimination([2,5,34,1,22,1]): ', elimination([2,5,34,1,22,1]));
+// console.log("testArray.indexOf(11): ", testArray.indexOf(11));
+// console.log("nextItem({}, 700): ", nextItem({}, 700));
 
+
+function nextItem(xs, item) {
+  console.log(xs, item);
+  console.log(xs.hasOwnProperty(item));
+  if (typeof xs == 'string') {
+    if (xs.includes(item) && xs.indexOf(item) != xs.length - 1) {
+      return xs.charAt(xs.indexOf(item) + 1);
+    } else {
+      return undefined;
+    }
+  } else if (xs.hasOwnProperty(item) == false) {
+    return undefined;
+  } else if (xs.indexOf(item) != -1 && xs.indexOf(item) != xs.length - 1) {
+    return xs[xs.indexOf(item) + 1];
+  } else {
+    return undefined;
+  }
+}
 
 function closeCompare(a, b, margin){
   if (Math.abs(a-b) <= margin) {
