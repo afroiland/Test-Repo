@@ -68,10 +68,6 @@ var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { nam
 // console.log("testArray.indexOf(11): ", testArray.indexOf(11));
 // console.log("nextItem({}, 700): ", nextItem({}, 700));
 
-let oldAdd = function(a, b) {return a + b};
-let newAdd = (a, b) => a + b;
-console.log('oldAdd(1, 2): ', oldAdd(1, 2));
-console.log('newAdd(1, 2): ', newAdd(1, 2));
 
 
 function nextItem(xs, item) {
