@@ -73,19 +73,19 @@ var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { nam
 
 var min = function(list){
     console.log('min of: ', list);
-    list.sort();
+    list.sort(function(a, b){return a-b});
     console.log(list);
     return list[0];
 }
 
 var max = function(list){
     console.log('max of: ', list);
-    list.sort();
+    list.sort(function(a, b){return a-b});
     console.log(list);
     return list[list.length-1];
 }
-console.log('min(testArray2): ', min(testArray2));
-console.log('max(testArray2): ', max(testArray2));
+// console.log('min(testArray2): ', min(testArray2));
+// console.log('max(testArray2): ', max(testArray2));
 
 function spellNum(num) {
   switch (num) {
