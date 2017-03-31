@@ -67,8 +67,42 @@ var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { nam
 // console.log('elimination([2,5,34,1,22,1]): ', elimination([2,5,34,1,22,1]));
 // console.log("testArray.indexOf(11): ", testArray.indexOf(11));
 // console.log("nextItem({}, 700): ", nextItem({}, 700));
+// console.log(spellNum(8));
 
-
+function spellNum(num) {
+  switch (num) {
+    case 1:
+    return 'One';
+    break;
+    case 2:
+    return 'Two';
+    break;
+    case 3:
+    return 'Three';
+    break;
+    case 4:
+    return 'Four';
+    break;
+    case 5:
+    return 'Five';
+    break;
+    case 6:
+    return 'Six';
+    break;
+    case 7:
+    return 'Seven';
+    break;
+    case 8:
+    return 'Eight';
+    break;
+    case 9:
+    return 'Nine';
+    break;
+    case 10:
+    return 'Ten';
+    break;
+  }
+}
 
 function nextItem(xs, item) {
   console.log(xs, item);
