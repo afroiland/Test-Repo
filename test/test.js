@@ -69,6 +69,24 @@ var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { nam
 // console.log("nextItem({}, 700): ", nextItem({}, 700));
 // console.log(spellNum(8));
 
+
+
+var min = function(list){
+    console.log('min of: ', list);
+    list.sort();
+    console.log(list);
+    return list[0];
+}
+
+var max = function(list){
+    console.log('max of: ', list);
+    list.sort();
+    console.log(list);
+    return list[list.length-1];
+}
+console.log('min(testArray2): ', min(testArray2));
+console.log('max(testArray2): ', max(testArray2));
+
 function spellNum(num) {
   switch (num) {
     case 1:
