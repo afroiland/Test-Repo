@@ -16,3 +16,6 @@ function increment() {
   setInterval( () => {this.number++; console.log(this.number);}, 1000);
 }
 // let incr = new increment();
+
+let switchItUp = n => ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][n];
+console.log(switchItUp(3));
