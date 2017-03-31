@@ -19,3 +19,10 @@ function increment() {
 
 let switchItUp = n => ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][n];
 console.log(switchItUp(3));
+
+let testArray2a = [1, -2, 5, 14, 8, 3];
+
+const min2 = (list) => Math.min(...list);
+const max2 = (list) => Math.max(...list);
+console.log(min2(testArray2a));
+console.log(max2(testArray2a));
