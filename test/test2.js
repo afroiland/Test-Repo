@@ -9,9 +9,9 @@ if (verbose) {console.log('oldAdd(1, 2): ', oldAdd(1, 2))};
 if (verbose) {console.log('newAdd(3, 4): ', newAdd(3, 4))};
 
 let fff = () => console.log('fff got called');
-fff();
+// fff();
 
-setTimeout( () => console.log('2 second timeout'), 2000);
+// setTimeout( () => console.log('2 second timeout'), 2000);
 
 function increment() {
   this.number = 0;
