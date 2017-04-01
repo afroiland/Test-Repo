@@ -1,10 +1,12 @@
 
 //ES6 Principles and Practice
 
+let verbose = false;
+
 let oldAdd = function(a, b) {return a + b};
 let newAdd = (a, b) => a + b;
-console.log('oldAdd(1, 2): ', oldAdd(1, 2));
-console.log('newAdd(3, 4): ', newAdd(3, 4));
+if (verbose) {console.log('oldAdd(1, 2): ', oldAdd(1, 2))};
+if (verbose) {console.log('newAdd(3, 4): ', newAdd(3, 4))};
 
 let fff = () => console.log('fff got called');
 fff();
@@ -18,11 +20,11 @@ function increment() {
 // let incr = new increment();
 
 let switchItUp = n => ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][n];
-console.log(switchItUp(3));
+if (verbose) {console.log(switchItUp(3))};
 
 let testArray2a = [1, -2, 5, 14, 8, 3];
 
 const min2 = (list) => Math.min(...list);
 const max2 = (list) => Math.max(...list);
-console.log(min2(testArray2a));
-console.log(max2(testArray2a));
+if (verbose) {console.log(min2(testArray2a))};
+if (verbose) {console.log(max2(testArray2a))};
