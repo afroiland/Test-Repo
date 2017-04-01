@@ -8,7 +8,22 @@ let addTo = function() {
   return passed + inner;
 }
 
-console.dir(addTo);
-console.dir(addTo());
+if (verbose) {console.dir(addTo)};
+if (verbose) {console.dir(addTo())};
 passed = 4;
-console.dir(addTo());
+if (verbose) {console.dir(addTo())};
+
+
+
+function Foo() {
+    return this;
+}
+
+var a = Foo();       //returns window object
+var b = new Foo();   //returns empty object of foo
+
+a instanceof Window  // true
+a instanceof Foo     // false
+
+b instanceof Window  // false
+b instanceof Foo     // true
