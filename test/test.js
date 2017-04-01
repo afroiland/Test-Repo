@@ -68,7 +68,7 @@ var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { nam
 // console.log("testArray.indexOf(11): ", testArray.indexOf(11));
 // console.log("nextItem({}, 700): ", nextItem({}, 700));
 // console.log(spellNum(8));
-console.log('parseF("one"): ', parseF('one'));
+// console.log('parseF("one"): ', parseF('one'));
 
 
 // console.log(parseFloat('one'));
@@ -78,7 +78,11 @@ function parseF(s) {
   console.log(s);
   console.log(typeof(parseFloat(s)));
   console.log(parseFloat(s));
-  if (typeof(parseFloat(s)) == 'number' && parseFloat(s) == NaN) {
+  if (s == 0 && s !== false) {
+    return 0;
+  } else if (s == false) {
+    return null;
+  } else if (typeof(parseFloat(s)) == 'number' && parseFloat(s)) {
     console.log('1st case (should be number): ', typeof(parseFloat(s)));
     console.log('1st case (should not be NaN): ', parseFloat(s));
     return parseFloat(s);
