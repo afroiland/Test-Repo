@@ -37,6 +37,7 @@ var basketballResults = [
 ];
 
 var busRiders = [[10,0],[3,5],[5,8]];
+var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { name: 'c' }, { name: 'e' }, { name: 'f' }, { name: 'g' }, { name: 'h' }, { name: 'z' } ];
 
 // remove(comeOn);
 // stairsIn20(arrArr);
@@ -60,7 +61,6 @@ var busRiders = [[10,0],[3,5],[5,8]];
 // console.log("digitize(54321): ", digitize(54321));
 // console.log("remove2('Hi!!!'): ", remove2('Hi!!!'));
 // console.log("replaceVowels('Hi!!'): ", replaceVowels2('HI!!'));
-var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { name: 'c' }, { name: 'e' }, { name: 'f' }, { name: 'g' }, { name: 'h' }, { name: 'z' } ];
 // console.log('duckDuckGoose(group1, x): ', duckDuckGoose(group1, 11));
 // console.log('newNumeralSystem(G): ', newNumeralSystem('G'));
 // console.log('formatMoney(3): ', formatMoney(3));
