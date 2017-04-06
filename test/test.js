@@ -69,10 +69,14 @@ var group1 = [ { name: 'a' }, { name: 'b' }, { name: 'c' }, { name: 'd' }, { nam
 // console.log("nextItem({}, 700): ", nextItem({}, 700));
 // console.log(spellNum(8));
 // console.log('parseF("one"): ', parseF('one'));
-
-
 // console.log(parseFloat('one'));
 // console.log(typeof parseFloat('one'));
+
+
+
+
+
+
 
 function parseF(s) {
   console.log(s);
